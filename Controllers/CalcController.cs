@@ -13,7 +13,12 @@ namespace CalculatorWeb.Controllers
          [HttpPost]
          public ActionResult Add(string firstNumber, string secondNumber)
         {
+            int numberOne = int.Parse(firstNumber);
+            int numberTwo = int.Parse(secondNumber);
+            int result = numberOne + numberTwo;
+            ViewBag.Result = result;
             return View();
+
         }
     }
 }
